@@ -7,7 +7,7 @@ w = wmi.WMI()
 # シャットダウンを実行する関数
 def shutdown():
     print("シャットダウンを実行します。")
-    os.system("shutdown /s /f /t 0")
+    os.system("shutdown /s /f /t 0 /full")
 
 # イベントを監視するWMIクエリ
 watcher = w.Win32_NTLogEvent.watch_for("creation", EventCode='105')
